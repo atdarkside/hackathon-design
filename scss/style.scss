@@ -119,6 +119,80 @@ body > section.show-sec/* show*/ {
 
 .article-sec {
 	overflow: scroll;
+	overflow-x:hidden; 
+	.controll-right {
+		z-index: 100;
+		width: 3em;
+		height: 100%;
+		position: fixed;
+		top:0;
+		right:0;
+		> p {
+			position: relative;
+			top:50%;
+			right: 0em;
+			transform: translateY(-50%);
+			letter-spacing: 2px;
+			color: #444;
+			font-size: 1.05em;
+			text-align: center;
+			> span {
+				writing-mode: vertical-rl;
+				position: relative;
+				right: 3em;
+				.NextCategoryName {
+					right: 0;
+					letter-spacing: 3px;
+				}
+			}
+			i {
+				cursor: pointer;
+				display: block;
+				position: absolute;
+				top:50%;
+				right: 50%;
+				transform:translateY(-50%);
+				font-size: 2em;
+			}
+		}
+	}
+	.controll-left {
+		z-index: 100;
+		width: 3em;
+		height: 100%;
+		position: fixed;
+		top:0;
+		left:0;
+		> p {
+			position: relative;
+			top:50%;
+			right: 0em;
+			transform: translateY(-50%);
+			letter-spacing: 2px;
+			color: #444;
+			font-size: 1.05em;
+			text-align: center;
+			> span {
+				writing-mode: vertical-rl;
+				transform: rotate(-180deg);
+				position: relative;
+				left: 3em;
+				.NextCategoryName {
+					right: 0;
+					letter-spacing: 3px;
+				}
+			}
+			i {
+				cursor: pointer;
+				display: block;
+				position: absolute;
+				top:50%;
+				right: 50%;
+				transform:translateY(-50%);
+				font-size: 2em;
+			}
+		}
+	}
 	> h2 {
 		font-family: 'Permanent Marker', cursive;
 		color: #333;
@@ -126,7 +200,14 @@ body > section.show-sec/* show*/ {
 		padding: 1em 1em;
 		font-size: 2em;
 	}
+	.cate-sec-wra {
+		width: 100%;
+		position: relative;
+	}
 	.cate-sec {
+		position: absolute;
+		top:0;
+		left: 0;
 		width: 100%;
 		.article-box{
 			width: 80%;
@@ -175,7 +256,7 @@ body > section.show-sec/* show*/ {
 					padding: 1em;
 					> div {
 						width: 100%;
-						box-shadow: 3px 3px 3px rgba(0,0,0,.1);
+						box-shadow: 3px 3px 3px rgba(0,0,0,.05);
 						.bg-box {
 
 							width: 100%;
@@ -229,4 +310,19 @@ body > section.show-sec/* show*/ {
 			}
 		}
 	}
+}
+
+/* category animation */
+.cate-sec { /* default */
+	transform: translateX(100%);
+	opacity: 0;
+	transition: all .75s;
+}
+.cate-sec-show {/* show */
+	transform: translateX(0%);
+	opacity: 1;
+}
+.cate-sec-hidden {/* hidden */
+	transform: translateX(-100%)!important;
+	opacity: 0;
 }
