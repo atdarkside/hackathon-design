@@ -1,4 +1,9 @@
 $(function(){
+	setTimeout(function(){
+		$(".image-wra").addClass("view");
+	},200);
+
+	
 
 	var Sec = $("body > section");
 	var SlideNum = $(Sec).length;

@@ -9,6 +9,7 @@
   src: url("../fonts/HuiFont29.ttf");
 }
 
+
 * {
 	padding: 0;
 	margin: 0;	
@@ -21,7 +22,31 @@ body,html {
 	font-family: 'Ome';
 	overflow: hidden;
 }
-
+@keyframes scrollicon {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes logoAnima {
+	0% {
+		transform: scale(1);
+	}
+	35% {
+		transform: scale(0.9);
+	}
+	70% {
+		transform: scale(1.25);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
 /* animation class */
 
 #main > section /* default hidden*/ {
@@ -41,6 +66,8 @@ body,html {
 }
 
 
+
+
 .mouse{
 	fill: none;
 	margin-bottom: 4px;
@@ -58,12 +85,15 @@ body,html {
 		color: #fff;
 		font-size: 1.1em;
 		letter-spacing: 1px;
+		animation: scrollicon 1.5s ease -2s infinite alternate;
 	}
 }
 
 .top-section {
 	padding: 3.5em 4em;
 	.logo {
+		animation: logoAnima .25s linear;
+		 animation-delay : .75s;
 		position: absolute;
 		top:0;
 		left: 4em;
@@ -83,6 +113,8 @@ body,html {
 		height: 3.5em;
 		padding-right: 0 .75em;
 		i {
+			animation: logoAnima .25s linear;
+		 	animation-delay : .75s;
 			position: relative;
 			line-height: 2em;
 			display: block;
@@ -96,13 +128,47 @@ body,html {
 			top:2px;
 		}
 	}
+	.access-links {
+		position: absolute;
+		bottom:0;
+		left: 4em;
+		height: 3.5em;
+		padding-right: 0 .75em;
+		a {
+			font-size: 1.25em;
+			text-decoration: none;
+			position: relative;
+			line-height: 2em;
+			display: block;
+			float: left;
+			color: #555;
+			//line-height: 2.5em;
+			padding:0 1em;
+			vertical-align: middle;
+			position: relative;
+			top:5px;
+			transition :all .25s;
+			i {
+				font-size: 1.5em;
+				margin-right: .25em;
+				vertical-align: middle;
+
+			}
+			&:hover {
+				animation: logoAnima .25s linear;
+			}
+		}
+	}
 	.sub-section {
+
 		color: #666;
 		position: absolute;
 		right: 0;
 		top: 50%;
 		transform: translateY(-50%);
 		 p {
+		 	animation: logoAnima .25s linear;
+		 	animation-delay : .75s;
 		 	writing-mode: vertical-rl;
 		 	letter-spacing: 2px;
 		 	font-family: 'Ome';
@@ -116,6 +182,11 @@ body,html {
 		background-position: bottom;
 		background-size: cover;
 		background-image: url(../img/bg.jpg);
+		transform: scale(0.65);
+		transition:all .6s;
+		&.view {
+			transform: scale(1);
+		}
 		.filter {
 			width: 100%;
 			height: 100%;
@@ -145,6 +216,21 @@ body,html {
 .article-sec {
 	overflow: scroll;
 	overflow-x:hidden; 
+	.sec-list {
+		text-align: center;
+	ul {
+		display: block;
+		list-style: none;
+		text-align: center;
+		overflow: auto;
+		margin: auto;
+
+		li {
+			float: left;
+			padding: 1.5em 1em;
+		}
+	}
+	}
 	.returnLink {
 		position: absolute;
 		top :0;
