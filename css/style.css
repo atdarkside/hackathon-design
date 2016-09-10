@@ -16,11 +16,12 @@ body, html {
   width: 100%;
   overflow: auto;
   font-family: 'Ome';
+  overflow: hidden;
 }
 
 /* animation class */
-/* line 22, ../scss/style.scss */
-section {
+/* line 23, ../scss/style.scss */
+body > section {
   position: absolute;
   top: 0;
   left: 0;
@@ -30,28 +31,28 @@ section {
   transition: all .7s;
 }
 
-/* line 31, ../scss/style.scss */
-section.hidden-sec {
+/* line 32, ../scss/style.scss */
+body > section.hidden-sec {
   transform: translateY(-100%);
 }
 
-/* line 34, ../scss/style.scss */
-section.show-sec {
+/* line 35, ../scss/style.scss */
+body > section.show-sec {
   transform: translateY(0);
 }
 
-/* line 38, ../scss/style.scss */
+/* line 39, ../scss/style.scss */
 .top-section {
   padding: 3.5em 4em;
 }
-/* line 40, ../scss/style.scss */
+/* line 41, ../scss/style.scss */
 .top-section .logo {
   position: absolute;
   top: 0;
   left: 4em;
   height: 3.5em;
 }
-/* line 45, ../scss/style.scss */
+/* line 46, ../scss/style.scss */
 .top-section .logo img {
   transform: translateY(-50%);
   position: relative;
@@ -59,7 +60,7 @@ section.show-sec {
   height: 50%;
   padding: 0 .75em;
 }
-/* line 53, ../scss/style.scss */
+/* line 54, ../scss/style.scss */
 .top-section .sns-links {
   position: absolute;
   top: 0;
@@ -67,7 +68,7 @@ section.show-sec {
   height: 3.5em;
   padding-right: 0 .75em;
 }
-/* line 59, ../scss/style.scss */
+/* line 60, ../scss/style.scss */
 .top-section .sns-links i {
   position: relative;
   line-height: 2em;
@@ -80,7 +81,7 @@ section.show-sec {
   position: relative;
   top: 2px;
 }
-/* line 73, ../scss/style.scss */
+/* line 74, ../scss/style.scss */
 .top-section .sub-section {
   color: #666;
   position: absolute;
@@ -88,7 +89,7 @@ section.show-sec {
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 79, ../scss/style.scss */
+/* line 80, ../scss/style.scss */
 .top-section .sub-section p {
   writing-mode: vertical-rl;
   letter-spacing: 2px;
@@ -96,7 +97,7 @@ section.show-sec {
   position: relative;
   right: 1em;
 }
-/* line 87, ../scss/style.scss */
+/* line 88, ../scss/style.scss */
 .top-section .image-wra {
   width: 100%;
   height: 100%;
@@ -104,30 +105,158 @@ section.show-sec {
   background-size: cover;
   background-image: url(../img/bg.jpg);
 }
-/* line 93, ../scss/style.scss */
+/* line 94, ../scss/style.scss */
 .top-section .image-wra .filter {
   width: 100%;
   height: 100%;
   background: rgba(51, 51, 51, 0.5);
 }
-/* line 98, ../scss/style.scss */
+/* line 99, ../scss/style.scss */
 .top-section .image-wra .title-box {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
 }
-/* line 103, ../scss/style.scss */
+/* line 104, ../scss/style.scss */
 .top-section .image-wra .title-box h1 {
   font-family: 'Permanent Marker', cursive;
   color: #fff;
   letter-spacing: 7px;
   font-size: 4em;
 }
-/* line 109, ../scss/style.scss */
+/* line 110, ../scss/style.scss */
 .top-section .image-wra .title-box > p {
   font-family: 'Permanent Marker', cursive;
   color: #fff;
   font-size: 1.5em;
   letter-spacing: 1px;
+}
+
+/* line 120, ../scss/style.scss */
+.article-sec {
+  overflow: scroll;
+}
+/* line 122, ../scss/style.scss */
+.article-sec > h2 {
+  font-family: 'Permanent Marker', cursive;
+  color: #333;
+  text-align: center;
+  padding: 1em 1em;
+  font-size: 2em;
+}
+/* line 129, ../scss/style.scss */
+.article-sec .cate-sec {
+  width: 100%;
+}
+/* line 131, ../scss/style.scss */
+.article-sec .cate-sec .article-box {
+  width: 80%;
+  margin: auto;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+  overflow: auto;
+}
+/* line 137, ../scss/style.scss */
+.article-sec .cate-sec .article-box .cate-title {
+  text-align: center;
+  background-image: url(../img/article1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+/* line 142, ../scss/style.scss */
+.article-sec .cate-sec .article-box .cate-title .filter {
+  background: rgba(51, 51, 51, 0.35);
+  width: 100%;
+  height: 100%;
+}
+/* line 146, ../scss/style.scss */
+.article-sec .cate-sec .article-box .cate-title .filter .white-fil {
+  padding: 3em;
+  padding-bottom: 8em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(0.8, rgba(255, 255, 255, 0)), to(#fff));
+}
+/* line 152, ../scss/style.scss */
+.article-sec .cate-sec .article-box .cate-title .filter .white-fil h3 {
+  font-size: 2em;
+  padding: .3em 0;
+  letter-spacing: 4px;
+  color: #fff;
+}
+/* line 158, ../scss/style.scss */
+.article-sec .cate-sec .article-box .cate-title .filter .white-fil p {
+  color: #fff;
+  opacity: .9;
+  font-size: .95em;
+  padding: .25em 0;
+}
+/* line 168, ../scss/style.scss */
+.article-sec .cate-sec .article-box .article-list {
+  list-style: none;
+  position: relative;
+  top: -4.5em;
+}
+/* line 172, ../scss/style.scss */
+.article-sec .cate-sec .article-box .article-list li {
+  width: calc( 100% / 3 );
+  float: left;
+  padding: 1em;
+}
+/* line 176, ../scss/style.scss */
+.article-sec .cate-sec .article-box .article-list li > div {
+  width: 100%;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+/* line 179, ../scss/style.scss */
+.article-sec .cate-sec .article-box .article-list li > div .bg-box {
+  width: 100%;
+  height: 15vw;
+  background: url(../img/article-pic.jpg);
+  background-position: center;
+  background-size: cover;
+}
+/* line 186, ../scss/style.scss */
+.article-sec .cate-sec .article-box .article-list li > div .bg-box .img-fil {
+  cursor: pointer;
+  background: rgba(51, 51, 51, 0);
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+  text-align: center;
+}
+/* line 193, ../scss/style.scss */
+.article-sec .cate-sec .article-box .article-list li > div .bg-box .img-fil > p {
+  transform: translateY(-50%);
+  position: relative;
+  top: 60%;
+  opacity: 0;
+  color: #fff;
+  font-size: 1.25em;
+  letter-spacing: 1px;
+  transition: all .25s;
+  font-weight: 100;
+}
+/* line 203, ../scss/style.scss */
+.article-sec .cate-sec .article-box .article-list li > div .bg-box .img-fil > p i {
+  display: block;
+  margin-right: .25em;
+  font-size: 2em;
+}
+/* line 210, ../scss/style.scss */
+.article-sec .cate-sec .article-box .article-list li > div .bg-box .img-fil:hover {
+  background: rgba(51, 51, 51, 0.45);
+}
+/* line 212, ../scss/style.scss */
+.article-sec .cate-sec .article-box .article-list li > div .bg-box .img-fil:hover > p {
+  top: 50%;
+  opacity: 1;
+}
+/* line 220, ../scss/style.scss */
+.article-sec .cate-sec .article-box .article-list li .article-text {
+  padding: .5em;
+}
+/* line 222, ../scss/style.scss */
+.article-sec .cate-sec .article-box .article-list li .article-text h6 {
+  padding: .25em;
+  font-size: .95em;
+  color: #555;
 }
