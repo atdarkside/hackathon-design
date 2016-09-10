@@ -40,6 +40,27 @@ body,html {
 	transform: translateY(0);
 }
 
+
+.mouse{
+	fill: none;
+	margin-bottom: 4px;
+	stroke: #fff;
+	stroke-width: 2;
+	width: 34px;
+}
+.plzscroll {
+	position: absolute;
+	bottom: 15%;
+	left:50%;
+	transform: translateX(-50%);
+	text-align: center;
+	p {
+		color: #fff;
+		font-size: 1.1em;
+		letter-spacing: 1px;
+	}
+}
+
 .top-section {
 	padding: 3.5em 4em;
 	.logo {
