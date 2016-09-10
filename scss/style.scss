@@ -145,6 +145,16 @@ body,html {
 .article-sec {
 	overflow: scroll;
 	overflow-x:hidden; 
+	&.show-sec {
+		.cate-sec-ready {
+			transform: translateY(0);
+			opacity: 1;
+			li {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	}
 	.controll-right {
 		z-index: 100;
 		width: 3em;
@@ -228,6 +238,18 @@ body,html {
 	.cate-sec-wra {
 		width: 100%;
 		position: relative;
+	}
+	.cate-sec-ready {
+		transform: translateY(20%);
+		opacity: 0.2;
+		transition: all .9s;
+		transition-delay : .2s;
+		li {
+			transform: translateY(20%);
+			opacity: 0.2;
+			transition: all .9s;
+			transition-delay : .5s;
+		}
 	}
 	.cate-sec {
 		position: absolute;
