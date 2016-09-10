@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@import 'https://fonts.googleapis.com/css?family=Permanent+Marker';
+@font-face {
+  font-family: 'Ome';
+  src: url("../fonts/OmePlus-P-Gothic.ttf");
+}
+
+* {
+	padding: 0;
+	margin: 0;	
+	box-sizing: border-box;
+}
+body,html {
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	font-family: 'Ome';
+}
+
+.top-section {
+	position: relative;
+	width: 100%;
+	height: 85%;
+	padding: 3em 4em;
+	.sns-links {
+		position: absolute;
+		top:0;
+		right: 0;
+		height: 3em;
+		padding: 0 4em;
+		i {
+			display: block;
+			float: left;
+			color: #555;
+			height: 100%;
+			//line-height: 2.5em;
+			font-size: 1.75em;
+			padding-left: 1em;
+			vertical-align: middle;
+			position: relative;
+			top:2px;
+		}
+	}
+	.sub-section {
+		color: #666;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		 p {
+		 	writing-mode: vertical-rl;
+		 	letter-spacing: 2px;
+		 	font-family: 'Ome';
+		 	position: relative;
+		 	right: 1em;
+		 }
+	}
+	.image-wra {
+		width: 100%;
+		height: 100%;
+		background-position: bottom;
+		background-size: cover;
+		background-image: url(../img/bg.jpg);
+		.filter {
+			width: 100%;
+			height: 100%;
+			background: rgba(51,51,51,.5);
+		}
+		.title-box {
+			position: relative;
+			top:50%;
+			transform: translateY(-50%);
+			text-align: center;
+			h1 {
+				font-family: 'Permanent Marker', cursive;
+				color: #fff;
+				letter-spacing: 7px;
+				font-size: 4em;
+			}
+			> p {
+				font-family: 'Permanent Marker', cursive;
+				color: #fff;
+				font-size: 1.5em;
+				letter-spacing: 1px;
+			}
+		}
+	}
+}

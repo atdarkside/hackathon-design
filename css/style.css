@@ -1,0 +1,98 @@
+@import "https://fonts.googleapis.com/css?family=Permanent+Marker";
+@font-face {
+  font-family: 'Ome';
+  src: url("../fonts/OmePlus-P-Gothic.ttf");
+}
+/* line 8, ../scss/style.scss */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* line 13, ../scss/style.scss */
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  font-family: 'Ome';
+}
+
+/* line 20, ../scss/style.scss */
+.top-section {
+  position: relative;
+  width: 100%;
+  height: 85%;
+  padding: 3em 4em;
+}
+/* line 25, ../scss/style.scss */
+.top-section .sns-links {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 3em;
+  padding: 0 4em;
+}
+/* line 31, ../scss/style.scss */
+.top-section .sns-links i {
+  display: block;
+  float: left;
+  color: #555;
+  height: 100%;
+  font-size: 1.75em;
+  padding-left: 1em;
+  vertical-align: middle;
+  position: relative;
+  top: 2px;
+}
+/* line 44, ../scss/style.scss */
+.top-section .sub-section {
+  color: #666;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 50, ../scss/style.scss */
+.top-section .sub-section p {
+  writing-mode: vertical-rl;
+  letter-spacing: 2px;
+  font-family: 'Ome';
+  position: relative;
+  right: 1em;
+}
+/* line 58, ../scss/style.scss */
+.top-section .image-wra {
+  width: 100%;
+  height: 100%;
+  background-position: bottom;
+  background-size: cover;
+  background-image: url(../img/bg.jpg);
+}
+/* line 64, ../scss/style.scss */
+.top-section .image-wra .filter {
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.5);
+}
+/* line 69, ../scss/style.scss */
+.top-section .image-wra .title-box {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+/* line 74, ../scss/style.scss */
+.top-section .image-wra .title-box h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: #fff;
+  letter-spacing: 7px;
+  font-size: 4em;
+}
+/* line 80, ../scss/style.scss */
+.top-section .image-wra .title-box > p {
+  font-family: 'Permanent Marker', cursive;
+  color: #fff;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
