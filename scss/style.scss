@@ -4,6 +4,10 @@
   font-family: 'Ome';
   src: url("../fonts/OmePlus-P-Gothic.ttf");
 }
+@font-face {
+  font-family: 'Yuna';
+  src: url("../fonts/HuiFont29.ttf");
+}
 
 * {
 	padding: 0;
@@ -20,7 +24,7 @@ body,html {
 
 /* animation class */
 
-body > section /* default hidden*/ {
+#main > section /* default hidden*/ {
 	position: absolute;
 	top:0;
 	left: 0;
@@ -29,10 +33,10 @@ body > section /* default hidden*/ {
 	transform: translateY(100%);
 	transition: all .7s;
 }
-body > section.hidden-sec {
+#main > section.hidden-sec {
 	transform: translateY(-100%);
 }
-body > section.show-sec/* show*/ {
+#main > section.show-sec/* show*/ {
 	transform: translateY(0);
 }
 
@@ -325,4 +329,76 @@ body > section.show-sec/* show*/ {
 .cate-sec-hidden {/* hidden */
 	transform: translateX(-100%)!important;
 	opacity: 0;
+}
+
+
+
+
+.recruitSec {
+	overflow: scroll;
+	.sns-links {
+		position: absolute;
+		top:0;
+		right: 4em;
+		height: 3.5em;
+		padding-right: 0 .75em;
+		i {
+			position: relative;
+			line-height: 2em;
+			display: block;
+			float: left;
+			color: #555;
+			//line-height: 2.5em;
+			font-size: 2em;
+			padding-left: 1em;
+			vertical-align: middle;
+			position: relative;
+			top:2px;
+		}
+	}
+	.title-box {
+		text-align: center;
+		padding: 1em;
+		> h2 {
+			font-family: 'Permanent Marker', cursive;
+			letter-spacing: 3px;
+			color: #333;
+			padding: .5em 1em;
+			font-size: 2.5em;
+		}
+		> p {
+
+		}
+	}
+	.member-list {
+		width: 100%;
+		padding:0 1.5em;
+		overflow: auto;
+		ul {
+			overflow: auto;
+			list-style: none;
+			li {
+				float: left;
+				width: 20%;
+				padding: 1em;
+				> div {
+					background: #fff;
+					box-shadow: 3px 3px 3px rgba(52,52,52,0.05);
+					padding: 1.25em;
+					width: 100%;
+					.profile-block {
+						width: 100%;
+						height: 14vw;
+						background-size: cover;
+						background-position: center;
+					}
+					h6 {
+						font-size: 1.35em;
+						color: #555;
+						font-family: 'Yuna';
+					}
+				}
+			}
+		}
+	}
 }

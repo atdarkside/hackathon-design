@@ -8,6 +8,8 @@ $(function(){
 	var CateNum = $(CateSec).length;
 	NowCateSec = 0;
 
+	$(".controll-left").hide(400);
+
 	var NextSlide =  function(NowSec){
 
 		$(Sec).eq(NowSec).removeClass("show-sec");
@@ -15,6 +17,20 @@ $(function(){
 
 		$(Sec).eq(NowSec + 1).addClass("show-sec");
 		$(Sec).eq(NowSec + 1).removeClass("hidden-sec");
+
+		NowSec++;
+
+	}
+
+	var PrevSlide =  function(NowSec){
+
+		$(Sec).eq(NowSec).addClass("show-sec");
+		$(Sec).eq(NowSec).removeClass("hidden-sec");
+
+		$(Sec).eq(NowSec - 1).removeClass("show-sec");
+		$(Sec).eq(NowSec - 1).addClass("hidden-sec");
+
+		NowSec--;
 
 	}
 

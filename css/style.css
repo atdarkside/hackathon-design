@@ -3,14 +3,18 @@
   font-family: 'Ome';
   src: url("../fonts/OmePlus-P-Gothic.ttf");
 }
-/* line 8, ../scss/style.scss */
+@font-face {
+  font-family: 'Yuna';
+  src: url("../fonts/HuiFont29.ttf");
+}
+/* line 12, ../scss/style.scss */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* line 13, ../scss/style.scss */
+/* line 17, ../scss/style.scss */
 body, html {
   height: 100%;
   width: 100%;
@@ -20,8 +24,8 @@ body, html {
 }
 
 /* animation class */
-/* line 23, ../scss/style.scss */
-body > section {
+/* line 27, ../scss/style.scss */
+#main > section {
   position: absolute;
   top: 0;
   left: 0;
@@ -31,28 +35,28 @@ body > section {
   transition: all .7s;
 }
 
-/* line 32, ../scss/style.scss */
-body > section.hidden-sec {
+/* line 36, ../scss/style.scss */
+#main > section.hidden-sec {
   transform: translateY(-100%);
 }
 
-/* line 35, ../scss/style.scss */
-body > section.show-sec {
+/* line 39, ../scss/style.scss */
+#main > section.show-sec {
   transform: translateY(0);
 }
 
-/* line 39, ../scss/style.scss */
+/* line 43, ../scss/style.scss */
 .top-section {
   padding: 3.5em 4em;
 }
-/* line 41, ../scss/style.scss */
+/* line 45, ../scss/style.scss */
 .top-section .logo {
   position: absolute;
   top: 0;
   left: 4em;
   height: 3.5em;
 }
-/* line 46, ../scss/style.scss */
+/* line 50, ../scss/style.scss */
 .top-section .logo img {
   transform: translateY(-50%);
   position: relative;
@@ -60,7 +64,7 @@ body > section.show-sec {
   height: 50%;
   padding: 0 .75em;
 }
-/* line 54, ../scss/style.scss */
+/* line 58, ../scss/style.scss */
 .top-section .sns-links {
   position: absolute;
   top: 0;
@@ -68,7 +72,7 @@ body > section.show-sec {
   height: 3.5em;
   padding-right: 0 .75em;
 }
-/* line 60, ../scss/style.scss */
+/* line 64, ../scss/style.scss */
 .top-section .sns-links i {
   position: relative;
   line-height: 2em;
@@ -81,7 +85,7 @@ body > section.show-sec {
   position: relative;
   top: 2px;
 }
-/* line 74, ../scss/style.scss */
+/* line 78, ../scss/style.scss */
 .top-section .sub-section {
   color: #666;
   position: absolute;
@@ -89,7 +93,7 @@ body > section.show-sec {
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 80, ../scss/style.scss */
+/* line 84, ../scss/style.scss */
 .top-section .sub-section p {
   writing-mode: vertical-rl;
   letter-spacing: 2px;
@@ -97,7 +101,7 @@ body > section.show-sec {
   position: relative;
   right: 1em;
 }
-/* line 88, ../scss/style.scss */
+/* line 92, ../scss/style.scss */
 .top-section .image-wra {
   width: 100%;
   height: 100%;
@@ -105,27 +109,27 @@ body > section.show-sec {
   background-size: cover;
   background-image: url(../img/bg.jpg);
 }
-/* line 94, ../scss/style.scss */
+/* line 98, ../scss/style.scss */
 .top-section .image-wra .filter {
   width: 100%;
   height: 100%;
   background: rgba(51, 51, 51, 0.5);
 }
-/* line 99, ../scss/style.scss */
+/* line 103, ../scss/style.scss */
 .top-section .image-wra .title-box {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
 }
-/* line 104, ../scss/style.scss */
+/* line 108, ../scss/style.scss */
 .top-section .image-wra .title-box h1 {
   font-family: 'Permanent Marker', cursive;
   color: #fff;
   letter-spacing: 7px;
   font-size: 4em;
 }
-/* line 110, ../scss/style.scss */
+/* line 114, ../scss/style.scss */
 .top-section .image-wra .title-box > p {
   font-family: 'Permanent Marker', cursive;
   color: #fff;
@@ -133,12 +137,12 @@ body > section.show-sec {
   letter-spacing: 1px;
 }
 
-/* line 120, ../scss/style.scss */
+/* line 124, ../scss/style.scss */
 .article-sec {
   overflow: scroll;
   overflow-x: hidden;
 }
-/* line 123, ../scss/style.scss */
+/* line 127, ../scss/style.scss */
 .article-sec .controll-right {
   z-index: 100;
   width: 3em;
@@ -147,7 +151,7 @@ body > section.show-sec {
   top: 0;
   right: 0;
 }
-/* line 130, ../scss/style.scss */
+/* line 134, ../scss/style.scss */
 .article-sec .controll-right > p {
   position: relative;
   top: 50%;
@@ -158,18 +162,18 @@ body > section.show-sec {
   font-size: 1.05em;
   text-align: center;
 }
-/* line 139, ../scss/style.scss */
+/* line 143, ../scss/style.scss */
 .article-sec .controll-right > p > span {
   writing-mode: vertical-rl;
   position: relative;
   right: 3em;
 }
-/* line 143, ../scss/style.scss */
+/* line 147, ../scss/style.scss */
 .article-sec .controll-right > p > span .NextCategoryName {
   right: 0;
   letter-spacing: 3px;
 }
-/* line 148, ../scss/style.scss */
+/* line 152, ../scss/style.scss */
 .article-sec .controll-right > p i {
   cursor: pointer;
   display: block;
@@ -179,7 +183,7 @@ body > section.show-sec {
   transform: translateY(-50%);
   font-size: 2em;
 }
-/* line 159, ../scss/style.scss */
+/* line 163, ../scss/style.scss */
 .article-sec .controll-left {
   z-index: 100;
   width: 3em;
@@ -188,7 +192,7 @@ body > section.show-sec {
   top: 0;
   left: 0;
 }
-/* line 166, ../scss/style.scss */
+/* line 170, ../scss/style.scss */
 .article-sec .controll-left > p {
   position: relative;
   top: 50%;
@@ -199,19 +203,19 @@ body > section.show-sec {
   font-size: 1.05em;
   text-align: center;
 }
-/* line 175, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 .article-sec .controll-left > p > span {
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
   position: relative;
   left: 3em;
 }
-/* line 180, ../scss/style.scss */
+/* line 184, ../scss/style.scss */
 .article-sec .controll-left > p > span .NextCategoryName {
   right: 0;
   letter-spacing: 3px;
 }
-/* line 185, ../scss/style.scss */
+/* line 189, ../scss/style.scss */
 .article-sec .controll-left > p i {
   cursor: pointer;
   display: block;
@@ -221,7 +225,7 @@ body > section.show-sec {
   transform: translateY(-50%);
   font-size: 2em;
 }
-/* line 196, ../scss/style.scss */
+/* line 200, ../scss/style.scss */
 .article-sec > h2 {
   font-family: 'Permanent Marker', cursive;
   color: #333;
@@ -229,76 +233,76 @@ body > section.show-sec {
   padding: 1em 1em;
   font-size: 2em;
 }
-/* line 203, ../scss/style.scss */
+/* line 207, ../scss/style.scss */
 .article-sec .cate-sec-wra {
   width: 100%;
   position: relative;
 }
-/* line 207, ../scss/style.scss */
+/* line 211, ../scss/style.scss */
 .article-sec .cate-sec {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
-/* line 212, ../scss/style.scss */
+/* line 216, ../scss/style.scss */
 .article-sec .cate-sec .article-box {
   width: 80%;
   margin: auto;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
   overflow: auto;
 }
-/* line 218, ../scss/style.scss */
+/* line 222, ../scss/style.scss */
 .article-sec .cate-sec .article-box .cate-title {
   text-align: center;
   background-image: url(../img/article1.jpg);
   background-position: center;
   background-size: cover;
 }
-/* line 223, ../scss/style.scss */
+/* line 227, ../scss/style.scss */
 .article-sec .cate-sec .article-box .cate-title .filter {
   background: rgba(51, 51, 51, 0.35);
   width: 100%;
   height: 100%;
 }
-/* line 227, ../scss/style.scss */
+/* line 231, ../scss/style.scss */
 .article-sec .cate-sec .article-box .cate-title .filter .white-fil {
   padding: 3em;
   padding-bottom: 8em;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(0.8, rgba(255, 255, 255, 0)), to(#fff));
 }
-/* line 233, ../scss/style.scss */
+/* line 237, ../scss/style.scss */
 .article-sec .cate-sec .article-box .cate-title .filter .white-fil h3 {
   font-size: 2em;
   padding: .3em 0;
   letter-spacing: 4px;
   color: #fff;
 }
-/* line 239, ../scss/style.scss */
+/* line 243, ../scss/style.scss */
 .article-sec .cate-sec .article-box .cate-title .filter .white-fil p {
   color: #fff;
   opacity: .9;
   font-size: .95em;
   padding: .25em 0;
 }
-/* line 249, ../scss/style.scss */
+/* line 253, ../scss/style.scss */
 .article-sec .cate-sec .article-box .article-list {
   list-style: none;
   position: relative;
   top: -4.5em;
 }
-/* line 253, ../scss/style.scss */
+/* line 257, ../scss/style.scss */
 .article-sec .cate-sec .article-box .article-list li {
   width: calc( 100% / 3 );
   float: left;
   padding: 1em;
 }
-/* line 257, ../scss/style.scss */
+/* line 261, ../scss/style.scss */
 .article-sec .cate-sec .article-box .article-list li > div {
   width: 100%;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
 }
-/* line 260, ../scss/style.scss */
+/* line 264, ../scss/style.scss */
 .article-sec .cate-sec .article-box .article-list li > div .bg-box {
   width: 100%;
   height: 15vw;
@@ -306,7 +310,7 @@ body > section.show-sec {
   background-position: center;
   background-size: cover;
 }
-/* line 267, ../scss/style.scss */
+/* line 271, ../scss/style.scss */
 .article-sec .cate-sec .article-box .article-list li > div .bg-box .img-fil {
   cursor: pointer;
   background: rgba(51, 51, 51, 0);
@@ -315,7 +319,7 @@ body > section.show-sec {
   transition: all .5s;
   text-align: center;
 }
-/* line 274, ../scss/style.scss */
+/* line 278, ../scss/style.scss */
 .article-sec .cate-sec .article-box .article-list li > div .bg-box .img-fil > p {
   transform: translateY(-50%);
   position: relative;
@@ -327,26 +331,26 @@ body > section.show-sec {
   transition: all .25s;
   font-weight: 100;
 }
-/* line 284, ../scss/style.scss */
+/* line 288, ../scss/style.scss */
 .article-sec .cate-sec .article-box .article-list li > div .bg-box .img-fil > p i {
   display: block;
   margin-right: .25em;
   font-size: 2em;
 }
-/* line 291, ../scss/style.scss */
+/* line 295, ../scss/style.scss */
 .article-sec .cate-sec .article-box .article-list li > div .bg-box .img-fil:hover {
   background: rgba(51, 51, 51, 0.45);
 }
-/* line 293, ../scss/style.scss */
+/* line 297, ../scss/style.scss */
 .article-sec .cate-sec .article-box .article-list li > div .bg-box .img-fil:hover > p {
   top: 50%;
   opacity: 1;
 }
-/* line 301, ../scss/style.scss */
+/* line 305, ../scss/style.scss */
 .article-sec .cate-sec .article-box .article-list li .article-text {
   padding: .5em;
 }
-/* line 303, ../scss/style.scss */
+/* line 307, ../scss/style.scss */
 .article-sec .cate-sec .article-box .article-list li .article-text h6 {
   padding: .25em;
   font-size: .95em;
@@ -354,7 +358,7 @@ body > section.show-sec {
 }
 
 /* category animation */
-/* line 316, ../scss/style.scss */
+/* line 320, ../scss/style.scss */
 .cate-sec {
   /* default */
   transform: translateX(100%);
@@ -362,16 +366,92 @@ body > section.show-sec {
   transition: all .75s;
 }
 
-/* line 321, ../scss/style.scss */
+/* line 325, ../scss/style.scss */
 .cate-sec-show {
   /* show */
   transform: translateX(0%);
   opacity: 1;
 }
 
-/* line 325, ../scss/style.scss */
+/* line 329, ../scss/style.scss */
 .cate-sec-hidden {
   /* hidden */
   transform: translateX(-100%) !important;
   opacity: 0;
+}
+
+/* line 337, ../scss/style.scss */
+.recruitSec {
+  overflow: scroll;
+}
+/* line 339, ../scss/style.scss */
+.recruitSec .sns-links {
+  position: absolute;
+  top: 0;
+  right: 4em;
+  height: 3.5em;
+  padding-right: 0 .75em;
+}
+/* line 345, ../scss/style.scss */
+.recruitSec .sns-links i {
+  position: relative;
+  line-height: 2em;
+  display: block;
+  float: left;
+  color: #555;
+  font-size: 2em;
+  padding-left: 1em;
+  vertical-align: middle;
+  position: relative;
+  top: 2px;
+}
+/* line 359, ../scss/style.scss */
+.recruitSec .title-box {
+  text-align: center;
+  padding: 1em;
+}
+/* line 362, ../scss/style.scss */
+.recruitSec .title-box > h2 {
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 3px;
+  color: #333;
+  padding: .5em 1em;
+  font-size: 2.5em;
+}
+/* line 373, ../scss/style.scss */
+.recruitSec .member-list {
+  width: 100%;
+  padding: 0 1.5em;
+  overflow: auto;
+}
+/* line 377, ../scss/style.scss */
+.recruitSec .member-list ul {
+  overflow: auto;
+  list-style: none;
+}
+/* line 380, ../scss/style.scss */
+.recruitSec .member-list ul li {
+  float: left;
+  width: 20%;
+  padding: 1em;
+}
+/* line 384, ../scss/style.scss */
+.recruitSec .member-list ul li > div {
+  background: #fff;
+  box-shadow: 3px 3px 3px rgba(52, 52, 52, 0.05);
+  padding: 1.25em;
+  width: 100%;
+}
+/* line 389, ../scss/style.scss */
+.recruitSec .member-list ul li > div .profile-block {
+  width: 100%;
+  height: 14vw;
+  background-size: cover;
+  background-position: center;
+}
+/* line 395, ../scss/style.scss */
+.recruitSec .member-list ul li > div h6 {
+  font-size: 1.35em;
+  color: #555;
+  font-family: 'Yuna';
 }
