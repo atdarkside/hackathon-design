@@ -1,0 +1,25 @@
+.button {
+	position: absolute;
+	width: 128px;
+	height: 128px;
+}
+.pointer,.c1,.c2{
+	opacity: 0.5; fill-rule: evenodd; clip-rule: evenodd; fill: none; stroke: #333;
+}
+.button:hover .pointer{
+	-webkit-animation: buttonArrow .3s ease-in 1; animation: buttonArrow .3s ease-in 1;
+}
+@-webkit-keyframes buttonArrow {
+	0% { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+	39% { -webkit-transform: translate(26px, 0); transform: translate(26px, 0); opacity: 0; }
+	59% { -webkit-transform: translate(26px, 0); transform: translate(26px, 0); opacity: 0; }
+	60% { -webkit-transform: translate(-26px, 0); transform: translate(-26px, 0); opacity: 0; }
+	100% { -webkit-transform: translate(0, 0); transform: translate(0, 0); opacity: 1; }
+}
+@keyframes buttonArrow {
+	0% { -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+	39% { -webkit-transform: translate(26px, 0); transform: translate(26px, 0); opacity: 0; }
+	59% { -webkit-transform: translate(26px, 0); transform: translate(26px, 0); opacity: 0; }
+	60% { -webkit-transform: translate(-26px, 0); transform: translate(-26px, 0); opacity: 0; }
+	100% { -webkit-transform: translate(0, 0); transform: translate(0, 0); opacity: 1; }
+}
