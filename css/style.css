@@ -18,34 +18,69 @@ body, html {
   font-family: 'Ome';
 }
 
-/* line 20, ../scss/style.scss */
-.top-section {
-  position: relative;
+/* animation class */
+/* line 22, ../scss/style.scss */
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 85%;
-  padding: 3em 4em;
+  height: 100%;
+  transform: translateY(100%);
+  transition: all .7s;
 }
-/* line 25, ../scss/style.scss */
+
+/* line 31, ../scss/style.scss */
+section.hidden-sec {
+  transform: translateY(-100%);
+}
+
+/* line 34, ../scss/style.scss */
+section.show-sec {
+  transform: translateY(0);
+}
+
+/* line 38, ../scss/style.scss */
+.top-section {
+  padding: 3.5em 4em;
+}
+/* line 40, ../scss/style.scss */
+.top-section .logo {
+  position: absolute;
+  top: 0;
+  left: 4em;
+  height: 3.5em;
+}
+/* line 45, ../scss/style.scss */
+.top-section .logo img {
+  transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  height: 50%;
+  padding: 0 .75em;
+}
+/* line 53, ../scss/style.scss */
 .top-section .sns-links {
   position: absolute;
   top: 0;
-  right: 0;
-  height: 3em;
-  padding: 0 4em;
+  right: 4em;
+  height: 3.5em;
+  padding-right: 0 .75em;
 }
-/* line 31, ../scss/style.scss */
+/* line 59, ../scss/style.scss */
 .top-section .sns-links i {
+  position: relative;
+  line-height: 2em;
   display: block;
   float: left;
   color: #555;
-  height: 100%;
-  font-size: 1.75em;
+  font-size: 2em;
   padding-left: 1em;
   vertical-align: middle;
   position: relative;
   top: 2px;
 }
-/* line 44, ../scss/style.scss */
+/* line 73, ../scss/style.scss */
 .top-section .sub-section {
   color: #666;
   position: absolute;
@@ -53,7 +88,7 @@ body, html {
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 50, ../scss/style.scss */
+/* line 79, ../scss/style.scss */
 .top-section .sub-section p {
   writing-mode: vertical-rl;
   letter-spacing: 2px;
@@ -61,7 +96,7 @@ body, html {
   position: relative;
   right: 1em;
 }
-/* line 58, ../scss/style.scss */
+/* line 87, ../scss/style.scss */
 .top-section .image-wra {
   width: 100%;
   height: 100%;
@@ -69,27 +104,27 @@ body, html {
   background-size: cover;
   background-image: url(../img/bg.jpg);
 }
-/* line 64, ../scss/style.scss */
+/* line 93, ../scss/style.scss */
 .top-section .image-wra .filter {
   width: 100%;
   height: 100%;
   background: rgba(51, 51, 51, 0.5);
 }
-/* line 69, ../scss/style.scss */
+/* line 98, ../scss/style.scss */
 .top-section .image-wra .title-box {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
 }
-/* line 74, ../scss/style.scss */
+/* line 103, ../scss/style.scss */
 .top-section .image-wra .title-box h1 {
   font-family: 'Permanent Marker', cursive;
   color: #fff;
   letter-spacing: 7px;
   font-size: 4em;
 }
-/* line 80, ../scss/style.scss */
+/* line 109, ../scss/style.scss */
 .top-section .image-wra .title-box > p {
   font-family: 'Permanent Marker', cursive;
   color: #fff;

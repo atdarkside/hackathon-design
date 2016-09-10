@@ -17,24 +17,53 @@ body,html {
 	font-family: 'Ome';
 }
 
-.top-section {
-	position: relative;
+/* animation class */
+
+section /* default hidden*/ {
+	position: absolute;
+	top:0;
+	left: 0;
 	width: 100%;
-	height: 85%;
-	padding: 3em 4em;
+	height: 100%;
+	transform: translateY(100%);
+	transition: all .7s;
+}
+section.hidden-sec {
+	transform: translateY(-100%);
+}
+section.show-sec/* show*/ {
+	transform: translateY(0);
+}
+
+.top-section {
+	padding: 3.5em 4em;
+	.logo {
+		position: absolute;
+		top:0;
+		left: 4em;
+		height: 3.5em;
+		img {
+			transform: translateY(-50%);
+			position: relative;
+			top:50%;
+			height: 50%;
+			padding: 0 .75em;
+		}
+	}
 	.sns-links {
 		position: absolute;
 		top:0;
-		right: 0;
-		height: 3em;
-		padding: 0 4em;
+		right: 4em;
+		height: 3.5em;
+		padding-right: 0 .75em;
 		i {
+			position: relative;
+			line-height: 2em;
 			display: block;
 			float: left;
 			color: #555;
-			height: 100%;
 			//line-height: 2.5em;
-			font-size: 1.75em;
+			font-size: 2em;
 			padding-left: 1em;
 			vertical-align: middle;
 			position: relative;
