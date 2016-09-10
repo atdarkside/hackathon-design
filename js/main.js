@@ -61,7 +61,7 @@ $(function(){
         }
     });
 
-	$(".article-sec > h2").on("click",function(){
+	$(".returnLink").on("click",function(){
 		NowSec = PrevSlide(NowSec);
 	});
 

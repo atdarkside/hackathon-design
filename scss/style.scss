@@ -145,6 +145,21 @@ body,html {
 .article-sec {
 	overflow: scroll;
 	overflow-x:hidden; 
+	.returnLink {
+		position: absolute;
+		top :0;
+		left: 0;
+		z-index: 1000;
+		padding: 1em;
+		p {
+			cursor: pointer;
+			font-size: 1.05em;
+			letter-spacing: 2px;
+		}
+		i {
+			font-size: 1.15em;
+		}
+	}
 	&.show-sec {
 		.cate-sec-ready {
 			transform: translateY(0);
